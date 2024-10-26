@@ -5,7 +5,7 @@ int main (){
 	char word1[10] ;
 	char word2[10] ;
 	printf("Enter the first word");
-	fgets(word1,10,stdin);
+	fgets(word2,10,stdin);
 	printf("Enter the first word");
 	fgets(word2,10,stdin);
 	
