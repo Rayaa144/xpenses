@@ -1,14 +1,30 @@
 #include <stdio.h>
-#include "include/levenshtein_distance.h"
+#include <string.h>
+#include "include/process.h"
 
-int main (){
-	char word1[10] ;
-	char word2[10] ;
-	printf("Enter the first word");
-	fgets(word2,10,stdin);
-	printf("Enter the first word");
-	fgets(word2,10,stdin);
-	
-	printf("%d \n",levenshtein_distance(word1,word2));
-	return 0;
+int main() {
+    char word[WORD_SIZE];
+	output shit;
+
+
+    printf("Enter the word: \n");
+    if (fgets(word, sizeof(word), stdin) == NULL) {
+        printf("Error reading the first word.\n");
+        return 1;
+    }
+
+    // Remove trailing newlines if present
+    word[strcspn(word, "\n")] = '\0';
+
+	shit=exsts(word);
+
+	if (shit.LowestDistance==FOUND) {
+		printf("yess");
+	}else if(shit.LowestDistance <= 2){
+		printf("distance is %c \n ",shit.LowestDistance);
+		printf("word found is %s \n",shit.string);
+	}else printf("nahhhh");
+
+    return 0;
 }
+
