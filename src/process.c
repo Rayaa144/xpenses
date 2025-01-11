@@ -1,3 +1,5 @@
+// managing the leenshtein distance 
+
 #include "../include/process.h"
 
 
